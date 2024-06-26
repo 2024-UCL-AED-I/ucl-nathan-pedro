@@ -38,12 +38,12 @@ public class Consulta
 
 public static class ArquivosUtils
 {
-    private static readonly string diretorioAplicacao = Directory.GetCurrentDirectory();
-    public static readonly string diretorioDadosPacientes = Path.Combine(diretorioAplicacao, "DadosPacientes");
-    private static readonly string diretorioHistoricoAgendamentos = Path.Combine(diretorioAplicacao, "Historico", "Agendamentos");
-    private static readonly string caminhoUltimoId = Path.Combine(diretorioDadosPacientes, "ultimoId.txt");
+    private readonly string diretorioAplicacao = Directory.GetCurrentDirectory();
+    public readonly string diretorioDadosPacientes = Path.Combine(diretorioAplicacao, "DadosPacientes");
+    private readonly string diretorioHistoricoAgendamentos = Path.Combine(diretorioAplicacao, "Historico", "Agendamentos");
+    private readonly string caminhoUltimoId = Path.Combine(diretorioDadosPacientes, "ultimoId.txt");
 
-    public static void SalvarPacienteEmArquivo(Paciente paciente)
+    public void SalvarPacienteEmArquivo(Paciente paciente)
     {
         try
         {
@@ -62,7 +62,7 @@ public static class ArquivosUtils
         }
     }
 
-    public static Paciente CarregarPacienteDeArquivo(string nomePaciente)
+    public Paciente CarregarPacienteDeArquivo(string nomePaciente)
     {
         try
         {
@@ -85,7 +85,7 @@ public static class ArquivosUtils
         }
     }
 
-    public static int LerUltimoId()
+    public int LerUltimoId()
     {
         if (File.Exists(caminhoUltimoId))
         {
@@ -137,9 +137,9 @@ public static class ArquivosUtils
 }
 public static class CriadorPaciente
 {
-    private static int ultimoIdPaciente = ArquivosUtils.LerUltimoId();
+    private int ultimoIdPaciente = ArquivosUtils.LerUltimoId();
 
-    public static Paciente CriarPaciente(string nome, string cpf, string rua, string numero, string bairro, string cidade, string cep, int idade, string email)
+    public Paciente CriarPaciente(string nome, string cpf, string rua, string numero, string bairro, string cidade, string cep, int idade, string email)
     {
         Paciente pacienteExistente = BuscarPaciente(nome);
         if (pacienteExistente != null)
@@ -172,7 +172,7 @@ public static class CriadorPaciente
         return paciente;
     }
 
-    public static Paciente BuscarPaciente(string criterioBusca)
+    public Paciente BuscarPaciente(string criterioBusca)
     {
         try
         {
@@ -198,12 +198,12 @@ public static class CriadorPaciente
         }
     }
 
-    public static Paciente BuscarPacientePorCPF(string cpf)
+    public Paciente BuscarPacientePorCPF(string cpf)
     {
         return BuscarPaciente(cpf);
     }
 
-    public static Paciente BuscarPacientePorNome(string nome)
+    public Paciente BuscarPacientePorNome(string nome)
     {
         return BuscarPaciente(nome);
     }
@@ -211,7 +211,7 @@ public static class CriadorPaciente
 
 public static class CriadorEndereco
 {
-    public static Endereco CriarEndereco(string logradouro, string numero, string bairro, string cidade, string cep)
+    public Endereco CriarEndereco(string logradouro, string numero, string bairro, string cidade, string cep)
     {
         return new Endereco
         {

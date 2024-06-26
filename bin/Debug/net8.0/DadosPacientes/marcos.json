@@ -1,0 +1,15 @@
+{
+  "Id": 2,
+  "Nome": "marcos",
+  "CPF": "12218554302",
+  "Endereco": {
+    "Logradouro": "rua sergipe",
+    "Numero": "556",
+    "Bairro": "bairro das laranjeiras",
+    "Cidade": "serra",
+    "CEP": "2654154"
+  },
+  "Idade": 60,
+  "Email": "marcos@gmail.com",
+  "Consultas": []
+}

@@ -1,0 +1,21 @@
+{
+  "Id": 1,
+  "Nome": "nathan",
+  "CPF": "18275786703",
+  "Endereco": {
+    "Logradouro": "rua jacana",
+    "Numero": "440",
+    "Bairro": "lagoa de carapebus",
+    "Cidade": "serra",
+    "CEP": "29164543"
+  },
+  "Idade": 23,
+  "Email": "nathansilva@ucl.br",
+  "Consultas": [
+    {
+      "Data": "2024-06-26T10:00:00",
+      "AcompanhamentoMedico": null,
+      "RecomendacoesMedicas": null
+    }
+  ]
+}

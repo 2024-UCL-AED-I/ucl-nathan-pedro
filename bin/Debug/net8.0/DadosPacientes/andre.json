@@ -1,0 +1,21 @@
+{
+  "Id": 3,
+  "Nome": "andre",
+  "CPF": "1854532891",
+  "Endereco": {
+    "Logradouro": "rua do projeto",
+    "Numero": "10",
+    "Bairro": "projelandia",
+    "Cidade": "serra",
+    "CEP": "12345"
+  },
+  "Idade": 19,
+  "Email": "andre@ucl.br",
+  "Consultas": [
+    {
+      "Data": "2024-06-26T15:00:00",
+      "AcompanhamentoMedico": null,
+      "RecomendacoesMedicas": null
+    }
+  ]
+}

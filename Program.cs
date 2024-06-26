@@ -10,7 +10,7 @@ namespace ASaltyPeter.TrabalhoAED1
     class Program
     {
         private static readonly string nomeMedico = "Dr. Renata";
-        private static readonly string diretorioHistoricoAgendamentos = "..\\Historico\\Agendamentos";
+        private static readonly string diretorioHistoricoAgendamentos = "Historico\\Agendamentos";
 
         static async Task Main(string[] args)
         {
@@ -71,7 +71,7 @@ namespace ASaltyPeter.TrabalhoAED1
             }
         }
 
-        static bool ConsoleDisponivel()
+        private bool ConsoleDisponivel()
         {
             try
             {
@@ -84,7 +84,7 @@ namespace ASaltyPeter.TrabalhoAED1
             }
         }
 
-        static async Task VerificarAgendaAsync()
+        private async Task VerificarAgendaAsync()
         {
             Console.WriteLine("Verificando agenda do dia...");
             Console.Write("Digite a data que deseja verificar (dd/MM/yyyy): ");
@@ -119,7 +119,7 @@ namespace ASaltyPeter.TrabalhoAED1
             await Task.CompletedTask;
         }
 
-        static async Task AgendarConsulta()
+        private async Task AgendarConsulta()
         {
             try
             {
@@ -168,7 +168,7 @@ namespace ASaltyPeter.TrabalhoAED1
             await Task.CompletedTask;
         }
 
-        static async Task CadastrarPaciente()
+        private async Task CadastrarPaciente()
         {
             try
             {
@@ -256,7 +256,7 @@ namespace ASaltyPeter.TrabalhoAED1
             await Task.CompletedTask;
         }
 
-        static async Task FichaPaciente()
+        private async Task FichaPaciente()
         {
             Console.WriteLine("Consultando prontuário...");
             Console.Write("Digite o nome ou CPF do paciente: ");
@@ -292,7 +292,7 @@ namespace ASaltyPeter.TrabalhoAED1
             await Task.CompletedTask;
         }
 
-       static async Task AtualizarCadastroPaciente()
+       private async Task AtualizarCadastroPaciente()
         {
             Console.WriteLine("Atualizando cadastro do paciente...");
             Console.Write("Digite o nome ou CPF do paciente: ");
@@ -375,7 +375,7 @@ namespace ASaltyPeter.TrabalhoAED1
 
             await Task.CompletedTask;
         }
-static async Task AtualizarDataConsulta()
+private async Task AtualizarDataConsulta()
 {
     try
     {
